@@ -162,12 +162,15 @@ omat = np.array([[0,1],[-1,0]])
 
 import numpy as np
 import matplotlib.pyplot as plt
+import math as m
 
 
 #Triangle vertices
-P = np.array([3/2,5.196/2]) 
+QR=p=5.5
+PQ=r=3
+P = np.array([r*m.cos(m.pi/3),r*m.sin(m.pi/3)]) 
 Q = np.array([0,0]) 
-R = np.array([5.5,0]) 
+R = np.array([p,0])  
 
 
 #Generating all lines
