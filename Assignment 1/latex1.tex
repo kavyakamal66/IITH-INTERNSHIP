@@ -55,6 +55,8 @@
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
 \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
 
+
+
 \def\inputGnumericTable{}                                 %%
 
 \lstset{
@@ -93,12 +95,12 @@ columns=fullflexible
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-\providecommand{\abs}[1]{\$left\vert#1\$right\vert}
+\providecommand{\abs}[1]{\l\vert#1\r\vert}
 \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-\providecommand{\norm}[1]{\$left\lVert#1\$right\rVert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
-\providecommand{\mean}[1]{E\$left[ #1 \$right]}
+\providecommand{\mean}[1]{E\l[ #1 \r]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
@@ -138,29 +140,27 @@ and latex-tikz codes from
 \begin{lstlisting}
 https://github.com/kavyakamal66/IITH-INTERNSHIP/blob/main/Assignment%201/latex1.tex
 \end{lstlisting}
-%
-\section{Question No. 2.14}
-\noindent Construct $\triangle PQR$  given that $PQ$=3, $QR$=5.5 and $\angle PQR=60^{\circ}$
+\section{Question No. 2.14}\\
+Construct $\triangle PQR$  given that $PQ= 3$, $QR=5.5$ and $\angle PQR=60^{\degree}$ \\
 %
 \section{Solution}
-\noindent Given $PQ$=3, $QR$=5.5 and $\angle PQR=60^{\circ}$\\
-\\*
-Let PQ=r, QR=p\\
-\\*
-The vertex P,Q and R can be expressed in polar coordinate form as:
+Given $PQ$=3, $QR$=5.5 and  $\angle PQR=60^{\degree}$ \\
+ Let, $PQ$=$r$, $QR$=$p$\\
+ The vertex P can be expressed in polar coordinate form as:\\
 \begin{align}
 \vec{P} = r\myvec{\cos\theta\\ \sin\theta}, \vec{Q} = \myvec{0\\0}, \vec{R} = \myvec{p\\0}
 \end{align}
 This can be written as,
 \begin{align}
 \vec{P} = 3\myvec{\cos60\\ \sin60} = \myvec{1.5\\(3\sqrt3)/2},  \vec{Q} = \myvec{0\\0},  \vec{R} = \myvec{5.5\\0}
-\end{align}\\*
-These values of P, Q and R are substituted and the triangle is plotted as given below.
-\begin{figure}[hbt!]
-         \includegraphics[width=4.5cm]{figure1.png}
+\end{align}
+\begin{figure}[!h]
+         \includegraphics[width= 0.7\columnwidth]{figure1.png}
          \caption{The Constructed triangle}
          \label{Figure}
 \end{figure}
+\\
+The values of P, Q and R are substituted and the triangle is plotted as given above.\\
 
 \end{document}
 
