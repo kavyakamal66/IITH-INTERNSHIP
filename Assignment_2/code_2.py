@@ -179,6 +179,7 @@ m=1
 a=ma.pi/2
 
 A=np.array([-m,1]) #given line 
+B =np.array([-6,0])
 
 omat = np.array([[0,-1],[1,0]]) 
 n_L= omat@(A.T)
@@ -205,6 +206,15 @@ plt.plot(F[0], F[1], 'o')
 plt.text(F[0] * (1 - 0.1), F[1] * (1 + 0.1) , 'F')
 plt.plot(P[0], P[1], 'o')
 plt.text(P[0] * (1 - 0.1), P[1] * (1 + 0.1) , 'P')
+
+x_FB=line_gen(F,B)
+plt.plot(x_FB[0,:],x_FB[1,:],label='L1')
+
+plt.grid() 
+plt.plot(F[0], F[1], 'o')
+plt.text(F[0] * (1 - 0.1), F[1] * (1 + 0.1) , 'F')
+plt.plot(B[0], B[1], 'o')
+plt.text(B[0] * (1 - 0.1), B[1] * (1 + 0.1) , 'B')
 
 plt.xlabel('$x$')
 plt.ylabel('$y$')
