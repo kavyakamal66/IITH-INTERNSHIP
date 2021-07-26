@@ -161,69 +161,66 @@ Since the circle passes through $\myvec{0\\0}$, the equation of given circle is,
     \vec{x^\top}\vec{x}+2\vec{u^\top}\vec{x}=0 \label{eq:2}
 \end{equation}
 
-Given intercepts are $\myvec{a\\0}$ and $\myvec{0\\b}$
-\\
+Given intercepts are $\myvec{a\\0}$ and $\myvec{0\\b}$  and 
+$\vec{u}$ be $\myvec{p\\q}$\\
 \begin{figure}[!h]
          \centering
          \includegraphics[width=\columnwidth]{figure3.png}
          \caption{Plot of the required circle}
          \label{Figure}
-\end{figure}
-Let x-intercept be $\myvec{6\\0}$, y-intercept be $\myvec{0\\8}$ and 
-$\vec{u}$ be $\myvec{p\\q}$
-\\
-Substituting $\myvec{6\\0}$ in \ref{eq:2}
+\end{figure}\\
+Substituting $\myvec{a\\0}$ in \ref{eq:2}
 
 \begin{equation}
-    \myvec{6\ 0}\myvec{6\\0}+2\vec{u^\top}\myvec{6\\0}=0
+    \myvec{a\ 0}\myvec{a\\0}+2\vec{u^\top}\myvec{a\\0}=0
 \end{equation}
 
 \begin{equation}
-\implies 36+2\myvec{p \ q}\myvec{6\\0}=0
+\implies a^2+2\myvec{p \ q}\myvec{a\\0}=0
 \end{equation}
 
 \begin{equation}
-    \implies \myvec{p \ q}\myvec{6\\0}=-18
+    \implies \myvec{p \ q}\myvec{a\\0}=-a^2/2
 \end{equation}
 
 \begin{equation}
-\implies p=-3
+\implies p=-a/2
 \end{equation}
 
-Substituting $\myvec{0\\8}$ in \ref{eq:2}
+Substituting $\myvec{0\\b}$ in \ref{eq:2}
 \\
 \begin{equation}
-    \myvec{0\ 8}\myvec{0\\8}+2\vec{u^\top}\myvec{0\\8}=0
+    \myvec{0\ b}\myvec{0\\b}+2\vec{u^\top}\myvec{0\\b}=0
 \end{equation}
 
 \begin{equation}
-\implies 64+2\myvec{p \ q}\myvec{0\\8}=0
+\implies b^2+2\myvec{p \ q}\myvec{0\\b}=0
 \end{equation}
 
 \begin{equation}
-    \implies \myvec{-3 \ q}\myvec{0\\8}=-32
+    \implies \myvec{p \ q}\myvec{0\\b}=-b^2/2
 \end{equation}
 
 \begin{equation}
-\implies q=-4
+\implies q=-b/2
 \end{equation}
 
 ie, 
 \begin{equation}
-    \vec{u}= \myvec{-3 \ -4}
+    \vec{u}= \myvec{-a/2 \ -b/2}
 \end{equation}
 
 Centre of the circle, $\vec{O}= -\vec{u}$
 
 \begin{equation}
-    \vec{O}= \myvec{3 \ 4}
+    \vec{O}= \myvec{a/2 \ b/2}
 \end{equation}
-
+Let x-intercept be $\myvec{6\\0}$, y-intercept be $\myvec{0\\8}$
 The radius of the circle can be found out using
 \begin{equation}
     r^2= \vec{u^\top}\vec{u}
 \end{equation}
-
+where $\vec{u}= \myvec{-a/2 \ -b/2}$
 \begin{equation}
     \implies \myvec{-3\\-4}\myvec{-3 \ -4} = 25
 \end{equation}
@@ -232,12 +229,15 @@ The radius of the circle can be found out using
     \implies r=5
 \end{equation}
 
-\\
 Hence , the equation of the given circle is,
 \begin{equation}
-    \vec{x^\top}\vec{x}+2\myvec{-3 \ -4 }\vec{x}=0
+    \vec{x^\top}\vec{x}+2\myvec{-a/2 \ -b/2 }\vec{x}=0
 \end{equation}
-
+\begin{equation}
+    \vec{x^\top}\vec{x}-\myvec{a \ b }\vec{x}=0
+\end{equation}
+Substituting, $a=3$ and $b=4$,\\
+Equation of given circle is,
 \begin{equation}
    \implies \vec{x^\top}\vec{x}-\myvec{6 \ 8 }\vec{x}=0
 \end{equation}
