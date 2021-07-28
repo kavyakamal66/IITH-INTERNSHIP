@@ -158,7 +158,7 @@ The general equation of circle is,
 \end{equation}
 Since the circle passes through $\myvec{0\\0}$, the equation of given circle is,
 \begin{equation}
-    \vec{x^\top}\vec{x}+2\vec{u^\top}\vec{x}=0 
+    \vec{x^\top}\vec{x}+2\vec{u^\top}\vec{x}=0 \label{eq:0}
 \end{equation}
 
 Given intercepts are $\myvec{a\\0}$ and $\myvec{0\\b}$ \\
@@ -201,41 +201,32 @@ From \ref{eq:1}, \ref{eq:2} and \ref{eq:3}
 \left\lVert {\myvec{0\\0}-\vec{O}}\right\rVert^2 - \left\lVert {\myvec{a\\0}-\vec{O}}\right\rVert^2= 0 \label{eq:5}
 \end{equation}
 
-Substituting $a=6$, $b=8$ in \ref{eq:4} and \ref{eq:5}
 
+Simplifying \ref{eq:4} and \ref{eq:5}
 \begin{equation}
-     \left\lVert {\myvec{0\\8}-\vec{O}}\right\rVert^2 - \left\lVert {\myvec{6\\0}-\vec{O}}\right\rVert^2= 0 \label{eq:6}
-\end{equation}
-
-\begin{equation}
-\left\lVert {\myvec{0\\0}-\vec{O}}\right\rVert^2 - \left\lVert {\myvec{6\\0}-\vec{O}}\right\rVert^2= 0 \label{eq:7}
-\end{equation}
-
-Simplifying \ref{eq:6} and \ref{eq:7}
-\begin{equation}
-    \myvec{3 & -4 \\ 1 & 0}\vec{O}= \myvec{-7 \\ 3}
+    \myvec{a/2 & -b/2 \\ 1 & 0}\vec{O}= \myvec{-(a+b)/2 \\ a/2}
 \end{equation}
 
 
 
 \begin{equation}
-\implies \myvec{3 & -4 & -7 \\ 1 & 0 & 3}
-\xleftrightarrow [R_1\leftarrow R_1/3]{R_2\leftarrow R_2-R_1}
+\implies \myvec{a/2 & -b/2 & -(a+b) \\ 1 & 0 & a/2}
+\xleftrightarrow [R_1\leftarrow 2R_1/a]{R_2\leftarrow R_2-R_1}
 =
-\myvec{1 & \frac{-4}{3} & \frac{-7}{3} \\ 0& \frac{4}{3} & \frac{16}{3}}
+\myvec{1 & \frac{-b/2}{a/2} & \frac{-(a+b)}{a/2} \\ 0& \frac{b/2}{a/2} & \frac{a^2+2(a+b)}{2a}}
 \end{equation}
 
 
 \begin{equation}
-  \implies \myvec{1 & \frac{-4}{3} & \frac{-7}{3} \\ 0& \frac{4}{3} & \frac{16}{3}}
-  \xleftrightarrow [R_1\leftarrow R_1+R_2]{R_2\leftarrow 3R_2/4}
+  \implies \myvec{1 & \frac{-b/2}{a/2} & \frac{-(a+b)}{a/2} \\ 0& \frac{b/2}{a/2} & \frac{a^2+2(a+b)}{2a}}
+  \xleftrightarrow [R_1\leftarrow R_1+R_2]{R_2\leftarrow aR_2/b}
 =
-\myvec{1 & 0 & 3 \\ 0& 1 & 4}
+\myvec{1 & 0 & a/2 \\ 0& 1 & b/2}
 \end{equation}
 
 
 \begin{equation}
-    \implies \vec{O}=\myvec{3 \\ 4} 
+    \implies \vec{O}=\myvec{a/2 \\ b/2} 
 \end{equation}
 
 \begin{equation}
@@ -243,9 +234,15 @@ Simplifying \ref{eq:6} and \ref{eq:7}
 \end{equation}
 
 \begin{equation}
-    \vec{u} = \myvec{-3\\-4}
+    \vec{u} = \myvec{-a/2\\-b/2}
 \end{equation}
-
+Substituting this in \ref{eq:0},
+\begin{equation}
+    \vec{x^\top}\vec{x}+2\vec{(-a/2 \ -b/2)}\vec{x}=0 
+\end{equation}
+\begin{equation}
+   \implies \vec{x^\top}\vec{x}-\myvec{a \ b }\vec{x}=0
+\end{equation}
 Substituting, $a=6$ and $b=8$,\\
 Equation of given circle is,
 \begin{equation}
