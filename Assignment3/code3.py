@@ -10,33 +10,32 @@ Original file is located at
 import numpy as np
 import matplotlib.pyplot as plt
 
-U = np.array([-3,-4])
-A = np.array([6,0])
-B = np.array([0,8])
-C = np.array([0,0])
-O = -U
-r=5
+#Quad vertices
+A = np.array([6, 0])
+B = np.array([0, 8])
+C = np.array([0, 0])
 
-len=100
-theta = np.linspace(0,2*np.pi,len)
-x_circ = np.zeros((2,len))
-x_circ[0,:] = r*np.cos(theta)
-x_circ[1,:] = r*np.sin(theta)
-x_circ = (x_circ.T + O).T
+p = np.array([[3, -4], [1, 0]])
+q = np.array([-7, 3])
+O = np.sum(np.linalg.inv(p)*q , axis=1)
+print(A, B, C, O)
 
-plt.plot(x_circ[0,:],x_circ[1,:] , label = '$Circle$')
+#plot circle
+circle1 = plt.Circle((O[0], O[1]), np.linalg.norm(A-O), color='b', fill=False)
 
-plt.plot(O[0],O[1], 'o',label='O')
-plt.text(O[1]*(1-0.1),O[1]*(1.005),'O')
-plt.plot(A[0],A[1], 'o',label='A')
-plt.text(A[1]*(1+0.89),A[1]*(1+0.9),'A')
-plt.plot(B[0],B[1], 'o',label='B')
-plt.text(B[1]*(1-0.89),B[1]*(1),'B')
-plt.plot(C[0],C[1], 'o',label='C')
-plt.text(C[1]*(1+0.9),C[1]*(1+0.99),'C')
+fig, ax = plt.subplots()
+ax.grid()
+ax.add_artist(circle1)
+ax.set_aspect('equal', adjustable='datalim')
 
-plt.xlabel('$x$')
-plt.ylabel('$y$')
-plt.legend(loc='upper left')
-plt.grid() 
-plt.axis('equal')
+
+#plot points and lines
+ax.text(A[0], A[1] * (1 - 0.1), 'A')
+ax.plot(A[0], A[1] , 'o')
+ax.text(B[0], B[1] * (1 - 0.1), 'B')
+ax.plot(B[0], B[1], 'o')
+ax.text(C[0], C[1] * (1 + 0.1), 'C')
+ax.plot(C[0], C[1], 'o')
+ax.text(O[0], O[1] * (1 - 0.2), 'O')
+ax.plot(O[0], O[1], 'o')
+
