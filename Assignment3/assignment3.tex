@@ -168,70 +168,38 @@ Given intercepts are $\myvec{a\\0}$ and $\myvec{0\\b}$ \\
          \caption{Plot of the required circle}
          \label{Figure}
 \end{figure}\\
-Equation of radius of circle is,
 
-\begin{equation}
-   \norm{\vec{x}-\vec{O}}=r
-\end{equation}
 Let 
 \begin{equation}
  \vec{A}=\myvec{a\\0} ,\\
  \vec{B}=\myvec{b\\0},\\
  \vec{C}=\myvec{0\\0}
 \end{equation}
-Substituting the given co-ordinates,
+Substituting the given co-ordinates,\\
+Equation of circle from \ref{eq:0},
 \begin{equation}
-\left\lVert {\vec{A}-\vec{O}}\right\rVert^2=r^2 \label{eq:1}
+    \vec{A^\top}\vec{A}+2\vec{u^\top}\vec{A}=0 \label{eq:4}
 \end{equation}
-
-
- \begin{equation}
-\left\lVert {\vec{B}-\vec{O}}\right\rVert^2=r^2 \label{eq:2}
-\end{equation}
-
-
-
 \begin{equation}
-\left\lVert {\vec{C}-\vec{O}}\right\rVert^2=r^2 \label{eq:3}
+    \vec{B^\top}\vec{B}+2\vec{u^\top}\vec{B}=0 \label{eq:5}
 \end{equation}
-
-
-From \ref{eq:1}, \ref{eq:2} and \ref{eq:3}
-\\
-\begin{equation}
-    \left\lVert {\vec{B}-\vec{O}}\right\rVert^2 - \left\lVert {\vec{A}-\vec{O}}\right\rVert^2= 0 \label{eq:4}
-\end{equation}
-
-\begin{equation}
-\left\lVert {\vec{C}-\vec{O}}\right\rVert^2 - \left\lVert {\vec{A}-\vec{O}}\right\rVert^2= 0 \label{eq:5}
-\end{equation}
-
-
 Simplifying \ref{eq:4} and \ref{eq:5}
 \begin{equation}
-    \myvec{a/2 & -b/2 \\ 1 & 0}\vec{O}= \myvec{-(a+b)/2 \\ a/2}
+    \myvec{a & 0 \\ 0 & b}\vec{u^\top}= \myvec{-a^2/2 \\ -b^2/2}
 \end{equation}
 
-
-
 \begin{equation}
-\implies \myvec{a/2 & -b/2 & -(a+b) \\ 1 & 0 & a/2}
-\xleftrightarrow [R_1\leftarrow 2R_1/a]{R_2\leftarrow R_2-R_1}
-=
-\myvec{1 & \frac{-b/2}{a/2} & \frac{-(a+b)}{a/2} \\ 0& \frac{b/2}{a/2} & \frac{a^2+2(a+b)}{2a}}
+\implies \myvec{a & 0 & -a^2/2 \\ 0 & b & -b^2/2}
+\xleftrightarrow [R_1\leftarrow R_1/a]{R_2\leftarrow R_2/b}
 \end{equation}
 
-
 \begin{equation}
-  \implies \myvec{1 & \frac{-b/2}{a/2} & \frac{-(a+b)}{a/2} \\ 0& \frac{b/2}{a/2} & \frac{a^2+2(a+b)}{2a}}
-  \xleftrightarrow [R_1\leftarrow R_1+R_2]{R_2\leftarrow aR_2/b}
-=
-\myvec{1 & 0 & a/2 \\ 0& 1 & b/2}
+  \implies \myvec{1 & 0 & -a/2 \\ 0& 1 & -b/2}
 \end{equation}
 
 
 \begin{equation}
-    \implies \vec{O}=\myvec{a/2 \\ b/2} 
+    \implies \vec{u}=\myvec{-a/2 & -b/2} 
 \end{equation}
 
 \begin{equation}
@@ -239,19 +207,19 @@ Simplifying \ref{eq:4} and \ref{eq:5}
 \end{equation}
 
 \begin{equation}
-    \vec{u} = \myvec{-a/2\\-b/2}
+    \vec{O} = \myvec{a/2 & b/2}
 \end{equation}
 Substituting this in \ref{eq:0},
 \begin{equation}
-    \vec{x^\top}\vec{x}+2\vec{(-a/2 \ -b/2)}\vec{x}=0 
+    \vec{x^\top}\vec{x}+2\myvec{-a/2 \\ -b/2}\vec{x}=0 
 \end{equation}
 \begin{equation}
-   \implies \vec{x^\top}\vec{x}-\myvec{a \ b }\vec{x}=0
+   \implies \vec{x^\top}\vec{x}-\myvec{a \\ b }\vec{x}=0
 \end{equation}
-Substituting, $a=6$ and $b=8$,\\
+Substituting, $a=6$ and $b=8$,the circle is plotted.
 Equation of given circle is,
 \begin{equation}
-   \implies \vec{x^\top}\vec{x}-\myvec{6 \ 8 }\vec{x}=0
+   \implies \vec{x^\top}\vec{x}-\myvec{6 \\ 8 }\vec{x}=0
 \end{equation}
 
 
