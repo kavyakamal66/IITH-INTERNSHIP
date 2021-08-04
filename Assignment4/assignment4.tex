@@ -155,13 +155,12 @@ Let
 Then
 \begin{align}
  \vec{B-A}=\myvec{6\\-2} ,
- \vec{x-A}=\myvec{x_1-1\\x_2-2}
+ \vec{x-A}=\vec{x}-\myvec{1\\2}
 \end{align}
 
 and
 \begin{align}
- \vec{M}=\myvec{B-A & C-A}^\top\\
- =\myvec{6 & -2\\ x_1-1 & x_2-2}
+ \vec{M}=\myvec{B-A & x-A}^\top
 \end{align}
 
 \begin{figure}[!h]
@@ -179,17 +178,15 @@ For $\vec{x},\vec{A}$ and $\vec{B}$ to be collinear
 \end{align}
 ie
 \begin{align}
-  6=k(x_1-1) \label{eq:1}\\
-  -2=k(x_2-2) \label{eq:2}
+  k(\vec{x-A})=\vec{B-A}\\
+  \implies \vec{x}-\myvec{1\\2}=1/k\myvec{6\\-2}\\
+  \implies \vec{x}=1/k\myvec{6\\-2}+\myvec{1\\2}
 \end{align}
-Solving \eqref{eq:1} and \eqref{eq:2}
-\begin{align}
-    \vec{x}=\myvec{7-3x_2\\x_2}
-\end{align}
-To plot the points,\\
-\\
-Let $x_2=1$
+Now we can find $\vec{x}$ by substituting values for k\\
+Let $\vec{C}$ be a point collinear to $\vec{A}$ and $\vec{B}$\\
+For $k=1/2$
 \begin{align}
     \vec{C}=\myvec{4\\1}
 \end{align}
+Points A,B and C are plotted and is seen to be collinear.
 \end{document}
