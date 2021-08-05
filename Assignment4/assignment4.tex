@@ -145,21 +145,20 @@ https://github.com/kavyakamal66/IITH-INTERNSHIP/blob/main/Assignment4/assignment
 \noindent Find the condition on $\vec{x}$ such that the points $\vec{x},\myvec{1\\2},\myvec{7 \\ 0}$ are collinear.
 %
 \section{\textbf {Solution}}
-The parametric equation of the line is\\
-$$\mathbf{x} = \mathbf{P} + \lambda \mathbf{m}$$\\
-where $\mathbf{m}$ is the direction vector and $\mathbf{P}$ is any point on the line.\\
-\begin{align}
-    \implies \mathbf{x}-\mathbf{P}  =  \lambda \mathbf{m}
-\end{align}
 Let 
 \begin{align}
  \vec{A}=\myvec{1\\2},
  \vec{B}=\myvec{7\\0}
 \end{align}
-
+The parametric equation of the line is\\
+$$\mathbf{x} = \mathbf{A} + \lambda \mathbf{m}$$\\
+where $\mathbf{m}$ is the direction vector and $\mathbf{A}$ is any point on the line.\\
+\begin{align}
+    \implies \mathbf{x}-\mathbf{A}  =  \lambda \mathbf{m} \label{eq:1}
+\end{align}
 Then direction vector, $\vec{m}$ of line AB is
 \begin{align}
- \vec{B-A}=\myvec{6\\-2} \\
+\vec{m}= \vec{B-A}=\myvec{6\\-2}
 \end{align}
 
 \begin{figure}[!h]
@@ -168,10 +167,9 @@ Then direction vector, $\vec{m}$ of line AB is
          \caption{Plot of given points}
          \label{Figure}
 \end{figure}
-For $\vec{x},\vec{A}$ and $\vec{B}$ to be collinear
+Substituting values in \eqref{eq:1}
 \begin{align}
-  \vec{x-A}=\lambda(\vec{B-A})\\
-  \implies \vec{x}-\myvec{1\\2}=\lambda\myvec{6\\-2}\\
+  \vec{x}-\myvec{1\\2}=\lambda\myvec{6\\-2}\\
   \implies \vec{x}=\lambda\myvec{6\\-2}+\myvec{1\\2}
 \end{align}
 Now we can find $\vec{x}$ by substituting values for $\lambda$.\\
