@@ -145,6 +145,9 @@ https://github.com/kavyakamal66/IITH-INTERNSHIP/blob/main/Assignment4/assignment
 \noindent Find the condition on $\vec{x}$ such that the points $\vec{x},\myvec{1\\2},\myvec{7 \\ 0}$ are collinear.
 %
 \section{\textbf {Solution}}
+The parametric equation of the line is\\
+$$\mathbf{x} = \mathbf{P} + \lambda \mathbf{m}$$\\
+where $\mathbf{m}$ is the direction vector and $\mathbf{P}$ is any point on the line.\\
 Let 
 \begin{align}
  \vec{A}=\myvec{1\\2} ,
@@ -152,15 +155,10 @@ Let
  \vec{x}=\myvec{x_1\\x_2}
 \end{align}
 
-Then
+Then direction vector, $\vec{m}$ of line AB and xA are
 \begin{align}
- \vec{B-A}=\myvec{6\\-2} ,
+ \vec{B-A}=\myvec{6\\-2} \\
  \vec{x-A}=\vec{x}-\myvec{1\\2}
-\end{align}
-
-and
-\begin{align}
- \vec{M}=\myvec{B-A & x-A}^\top
 \end{align}
 
 \begin{figure}[!h]
@@ -170,13 +168,6 @@ and
          \label{Figure}
 \end{figure}
 For $\vec{x},\vec{A}$ and $\vec{B}$ to be collinear
-\begin{align}
-   \implies rank(M)=1
-\end{align}
-\begin{align}
-    \implies R_1=kR_2
-\end{align}
-ie
 \begin{align}
   k(\vec{x-A})=\vec{B-A}\\
   \implies \vec{x}-\myvec{1\\2}=1/k\myvec{6\\-2}\\
