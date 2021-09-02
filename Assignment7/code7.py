@@ -22,7 +22,8 @@ plt.title('Solution marked in red')
 plt.xlabel('$x$')
 
 frame1.axes.get_yaxis().set_visible(False)
-#plt.savefig('./pyfigs/ineq.eps')
-#plt.ylim([0,0.1])
+plt.savefig('./figs/fig7.pdf')
+plt.savefig('fig7.png')
+subprocess.run(shlex.split("termux-open ./figs/fig7.pdf"))
 
-plt.show()
+plt.ylim([0,0.1])
